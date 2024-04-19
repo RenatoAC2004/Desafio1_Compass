@@ -361,6 +361,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   transition: all 200ms ease-in-out;
+  cursor: pointer;
 }
 
 .hoverteste {
