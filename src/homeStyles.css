@@ -382,7 +382,7 @@ body {
 
 .sectionNewsletter {
   height: 100%;
-  padding: 100px 135px;
+  padding: 150px 135px;
 }
 
 .newsletterText {
@@ -390,6 +390,11 @@ body {
   flex-direction: column;
   row-gap: 30px;
   padding-bottom: 75px;
+}
+
+.newsletterText h1{
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .newsletterContainer {
@@ -518,3 +523,10 @@ body {
   padding: 30px;
   background-color: #070707;
 }
+
+  /* ESTILO SPAN VALIDAÇÃO DOS DADOS */
+
+  .mensagemErro{
+    font-size: 14px;
+    color: #DC7000;
+  }

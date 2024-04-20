@@ -95,6 +95,10 @@ body {
   text-decoration: none;
 }
 
+.contactSection a:hover {
+    text-decoration-line: underline;
+  }
+
 .contactSection span {
   color: #e47500;
 }
@@ -113,6 +117,7 @@ body {
   height: 100px;
   display: flex;
   column-gap: 100px;
+  justify-content: center;
   align-items: center;
 }
 
@@ -214,7 +219,9 @@ body {
     margin-bottom: auto;
 }
 
-.formContainer input[type="text"], input[type="email"], textarea{
+.formContainer input[type="text"], 
+.formContainer input[type="email"], 
+.formContainer textarea{
     border: 0.6px solid #CECECE;
     background-color: rgba(255, 255, 255, 0.07);
     padding: 17px 13px;
@@ -274,4 +281,165 @@ textarea{
     border: 0;
     border-radius: 10px;
     align-self: flex-end;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
 }
+
+.botaoSubmit:hover{
+    background-color: #b94d04;
+}
+
+/* ---------------------------------------------------------- */
+
+/* NEWSLETTER SECTION */
+
+.sectionNewsletter {
+    height: 100%;
+    padding: 150px 135px;
+  }
+  
+  .newsletterText {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-bottom: 75px;
+  }
+
+  .newsletterText h1{
+    font-weight: 600;
+    font-size: 30px;
+  }
+  
+  .newsletterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+    padding: 40px 50px;
+    background-color: #1c140f;
+    border-radius: 15px;
+  }
+  
+  .newsletterFormText {
+    width: 50%;
+  }
+  
+  .newsletterFormText h1 {
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  
+  .inputContainer {
+    position: relative;
+  }
+  
+  .inputContainer button {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    padding: 8px 22px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #dc7000;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .inputEmail2 {
+    width: 390px;
+    padding: 14px 120px 14px 20px;
+    border: 0;
+    border-radius: 8px;
+    color: black;
+  }
+  
+  .inputContainer button:hover {
+    background-color: #b94d04;
+  }
+
+  /* ---------------------------------------------------------- */
+
+/* FOOTER */
+
+.footerContainer {
+    display: flex;
+    height: 100%;
+    padding: 80px 100px 50px 100px;
+    background-color: #070707;
+    justify-content: space-evenly;
+    column-gap: 100px;
+    border-bottom: 1px solid white;
+  }
+  
+  .columnFooter {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .columnFooter h1 {
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 15px;
+  }
+  
+  .columnFooter h4 {
+    padding-bottom: 15px;
+    text-wrap: nowrap;
+  }
+  
+  .columnFooter a {
+    padding-bottom: 5px;
+    text-wrap: nowrap;
+    text-decoration: none;
+  }
+  
+  .columnFooter p {
+    height: 100%;
+    display: flex;
+  }
+  
+  .alignEnd {
+    align-items: flex-end;
+  }
+  
+  .buttonsContainerFooter {
+    display: flex;
+    height: 100%;
+    column-gap: 16px;
+    align-items: flex-end;
+  }
+  
+  .circleFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+    background-color: white;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+  
+  .circleFooter a {
+    padding-bottom: 0;
+  }
+  
+  .copyrightContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    background-color: #070707;
+  }
+  
+  /* ESTILO SPAN VALIDAÇÃO DOS DADOS */
+
+  .mensagemErro{
+    font-size: 14px;
+    color: #DC7000;
+  }

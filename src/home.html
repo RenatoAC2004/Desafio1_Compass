@@ -12,9 +12,9 @@
 
       <div class="lista">
         <a href="" class="active">Home</a>
-        <a href="">About us</a>
-        <a href="">Portfolio</a>
-        <a href="">News</a>
+        <a href="error.html">About us</a>
+        <a href="error.html">Portfolio</a>
+        <a href="error.html">News</a>
         <button onclick="window.location.href='contact.html'">Contact us</button>
       </div>
     </nav>
@@ -28,7 +28,7 @@
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard.
             </p>
-            <button>Get more details</button>
+            <button onclick="window.location.href='error.html'">Get more details</button>
           </div>
         </div>
 
@@ -42,7 +42,7 @@
       <div class="gamesContainer">
         <div class="titleContainer">
           <p>Currently Trending Games</p>
-          <button>SEE ALL</button>
+          <button onclick="window.location.href='error.html'">SEE ALL</button>
         </div>
         <div class="gameImagesContainer">
           <div class="imageAndText">
@@ -184,7 +184,7 @@
       </div>
 
       <div class="projectsButton">
-        <button>SEE ALL</button>
+        <button onclick="window.location.href='contact.html'">SEE ALL</button>
       </div>
     </section>
 
@@ -215,9 +215,11 @@
               />
               <button type="submit">Continue</button>
             </div>
+            <span class="mensagemErro" id="erroEmailNewsletter"></span>
           </form>
         </div>
       </div>
+      <dialog id="modalValidacao"></dialog>
     </section>
 
     <footer>
@@ -233,9 +235,9 @@
 
         <div class="column">
           <h4>About us</h4>
-          <a href="">Zeux</a>
-          <a href="">Portfolio</a>
-          <a href="">Careers</a>
+          <a href="error.html">Zeux</a>
+          <a href="error.html">Portfolio</a>
+          <a href="error.html">Careers</a>
           <a href="contact.html">Contact us</a>
         </div>
 
@@ -279,6 +281,7 @@
       </div>
     </footer>
 
-    <script src="efeitoHoverCards.js"></script>
+    <script src="js/efeitoHoverCards.js"></script>
+    <script src="js/validarDadosHome.js"></script>
   </body>
 </html>
