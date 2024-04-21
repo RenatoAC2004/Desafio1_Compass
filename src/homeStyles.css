@@ -392,7 +392,7 @@ body {
   padding-bottom: 75px;
 }
 
-.newsletterText h1{
+.newsletterText h1 {
   font-weight: 600;
   font-size: 30px;
 }
@@ -524,9 +524,71 @@ body {
   background-color: #070707;
 }
 
-  /* ESTILO SPAN VALIDAÇÃO DOS DADOS */
+/* ESTILO SPAN VALIDAÇÃO DOS DADOS */
 
-  .mensagemErro{
-    font-size: 14px;
-    color: #DC7000;
-  }
+.mensagemErro {
+  font-size: 14px;
+  color: #dc7000;
+}
+
+/* MODAL DE CONFIRMAÇÃO */
+
+.modalValidacao {
+  width: 400px;
+  height: 600px;
+
+  margin: auto;
+
+  border-radius: 20px;
+
+  padding: 3em;
+  text-align: center;
+  background: #1c140f;
+  border: 0;
+}
+
+.modalValidacao h1 {
+  width: 100%;
+  font-size: 40px;
+  font-weight: 800;
+
+}
+
+.modalContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageTextModal {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.imageTextModal img{
+  width: 50%;
+}
+
+.imageTextModal p {
+  padding-top: 10px;
+}
+
+.modalValidacao button {
+  background-color: var(--orangeButtons);
+  padding: 15px 30px;
+  font-weight: 500;
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+}
+
+.modalValidacao::backdrop {
+  background: linear-gradient(180.96deg, #39289f 0.82%, #422f9c 129.1%);
+  opacity: 0.8;
+}
+
+.modalValidacao button:hover {
+  background-color: #eb6f0b;
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+}

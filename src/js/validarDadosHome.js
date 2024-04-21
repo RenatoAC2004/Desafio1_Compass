@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
     
     let estaValido;
+
+    const modalValidacao = document.getElementById("modalValidacao")
     
     function validarDadosNewsletter(evento){
         evento.preventDefault();
@@ -22,11 +24,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
         if(estaValido) {
-            console.log("formulario valido")
-    
+            modalValidacao.showModal()
+
+            localStorage.setItem("emailNewsletterHome", emailNewsletter.value)
+
             emailNewsletter.value = ""
         }
     }
 
     document.querySelector('.newsletterForm').addEventListener('submit', validarDadosNewsletter);
+
+    const emailNewsletterHomeSalvo = localStorage.getItem("emailNewsletterHome")
+
+
+if(emailNewsletterHomeSalvo){
+    document.getElementById("inputEmail").value = emailNewsletterHomeSalvo
+}
     });

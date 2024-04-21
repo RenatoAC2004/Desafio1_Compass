@@ -3,6 +3,8 @@ const regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
 
 let estaValido;
 
+const modalValidacao = document.getElementById("modalValidacao")
+
 function validarDados(evento) {
     evento.preventDefault()
 
@@ -56,7 +58,16 @@ function validarDados(evento) {
     }
 
     if(estaValido) {
-        console.log("formulario valido")
+        modalValidacao.showModal()
+
+        const dadosFormulario = {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            email: email.value,
+            message: message.value
+        };
+
+        localStorage.setItem("dadosFormulario", JSON.stringify(dadosFormulario));
 
         firstName.value = ""
         lastName.value = ""
@@ -86,7 +97,9 @@ function validarDadosNewsletter(evento){
     }
 
     if(estaValido) {
-        console.log("formulario valido")
+        modalValidacao.showModal()
+
+        localStorage.setItem("emailNewsletter", emailNewsletter.value)
 
         emailNewsletter.value = ""
     }
@@ -94,4 +107,19 @@ function validarDadosNewsletter(evento){
 
 document.querySelector('.form').addEventListener('submit', validarDados);
 document.querySelector('.newsletterForm').addEventListener('submit', validarDadosNewsletter);
+
+const dadosSalvos = localStorage.getItem("dadosFormulario");
+const emailNewsletterSalvo = localStorage.getItem("emailNewsletter")
+
+if(dadosSalvos) {
+    const dados = JSON.parse(dadosSalvos);
+    document.getElementById('firstName').value = dados.firstName
+    document.getElementById('lastName').value = dados.lastName
+    document.getElementById('email').value = dados.email
+    document.getElementById('message').value = dados.message
+}
+
+if(emailNewsletterSalvo){
+    document.getElementById("inputEmail2").value = emailNewsletterSalvo
+}
 });

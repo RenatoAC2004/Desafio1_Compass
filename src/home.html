@@ -15,7 +15,9 @@
         <a href="error.html">About us</a>
         <a href="error.html">Portfolio</a>
         <a href="error.html">News</a>
-        <button onclick="window.location.href='contact.html'">Contact us</button>
+        <button onclick="window.location.href='contact.html'">
+          Contact us
+        </button>
       </div>
     </nav>
     <section id="hero" class="sectionHero">
@@ -28,7 +30,9 @@
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard.
             </p>
-            <button onclick="window.location.href='error.html'">Get more details</button>
+            <button onclick="window.location.href='error.html'">
+              Get more details
+            </button>
           </div>
         </div>
 
@@ -219,7 +223,16 @@
           </form>
         </div>
       </div>
-      <dialog id="modalValidacao"></dialog>
+      <dialog id="modalValidacao" class="modalValidacao">
+        <div class="modalContent">
+        <h1>Confirmado</h1>
+        <div class="imageTextModal">
+          <img src="images/confirm.svg" alt=""/>
+          <p>Seus dados foram enviados com sucesso!</p>
+        </div>
+        <button onclick="document.getElementById('modalValidacao').close()">Fechar Modal</button>
+      </div>
+      </dialog>
     </section>
 
     <footer>
