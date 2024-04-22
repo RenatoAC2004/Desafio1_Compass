@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contactStyles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <span class="logo">LOGO</span>
+
+      <button class="menuMobile" id="menuMobile">
+        <img src="images/menu.svg" />
+      </button>
+      <div class="lista" id="itemsNav">
+        <span class="logoMobile">LOGO</span>
+        <a href="home.html">Home</a>
+        <a href="error.html">About us</a>
+        <a href="error.html">Portfolio</a>
+        <a href="error.html">News</a>
+        <button onclick="window.location.href='contact.html'">
+          Contact us
+        </button>
+      </div>
+    </nav>
+
+    <section class="contactSection">
+      <p><a href="home.html">Home</a> > <span>Contact us</span></p>
+      <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </p>
+
+      <img src="images/Huge_Global.png" alt="" class="mapaImagem" />
+
+      <div class="contactBar">
+        <div class="column">
+          <p>Follow us</p>
+          <div class="buttonsContainer">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="circle facebook"
+            >
+              <img src="images/facebook_white.svg" alt="facebook" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="circle instagram"
+            >
+              <img src="images/instagram_white.svg" alt="instagram" />
+            </a>
+
+            <a
+              href="https://www.twitter.com/"
+              target="_blank"
+              class="circle twitter"
+            >
+              <img src="images/twitter_white.svg" alt="twitter" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              class="circle linkedin"
+            >
+              <img src="images/linkedin_white.svg" alt="linkedin" />
+            </a>
+          </div>
+        </div>
+        <div class="column2">
+          <img src="images/telephone.svg" alt="telefone" />
+          <p>+94 4444 5555 6</p>
+        </div>
+        <div class="column3">
+          <img src="images/gps 1.svg" alt="gps" />
+          <p>but also the leap into electronic typesetting</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formsSection" class="formsSection">
+      <img src="images/whiteLine.svg" alt="" class="whiteLine" />
+      <img src="images/brownLine.svg" alt="" class="brownLine" />
+      <div class="formContainer">
+        <h1>Say hello</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing .</p>
+
+        <form action="" method="get" class="form">
+          <div class="linha1">
+            <div class="inputsLinha1">
+              <label for="firstName">First Name</label>
+              <input type="text" name="firstName" id="firstName" />
+              <span class="mensagemErro" id="erroFirstName"></span>
+            </div>
+
+            <div class="inputsLinha1">
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" />
+              <span class="mensagemErro" id="erroLastName"></span>
+            </div>
+          </div>
+
+          <div class="inputEmail">
+            <label for="email">Email Adress</label>
+            <input type="email" name="email" id="email" />
+            <span class="mensagemErro" id="erroEmail"></span>
+          </div>
+
+          <div class="inputMessage">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <span class="mensagemErro" id="erroMessage"></span>
+          </div>
+
+          <input type="submit" value="Get in touch" class="botaoSubmit" />
+        </form>
+      </div>
+    </section>
+
+    <section id="" class="sectionNewsletter">
+      <div class="newsletterText">
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+
+      <div class="newsletterContainer">
+        <div class="newsletterFormText">
+          <h1>Stay in the loop</h1>
+          <p>Subscribe to receive the latest news and updates about TDA.</p>
+          <p>We promise not to spam you!</p>
+        </div>
+        <div>
+          <form action="" method="post" class="newsletterForm">
+            <div class="inputContainer">
+              <input
+                type="email"
+                name="inputEmail2"
+                id="inputEmail2"
+                class="inputEmail2"
+                placeholder="Enter email adress"
+              />
+              <button type="submit">Continue</button>
+            </div>
+            <span class="mensagemErro" id="erroEmailNewsletter"></span>
+          </form>
+        </div>
+      </div>
+
+      <dialog id="modalValidacao" class="modalValidacao">
+        <div class="modalContent">
+          <h1>Confirmado</h1>
+          <div class="imageTextModal">
+            <img src="images/confirm.svg" alt="" />
+            <p>Seus dados foram enviados com sucesso!</p>
+          </div>
+          <button onclick="document.getElementById('modalValidacao').close()">
+            Fechar Modal
+          </button>
+        </div>
+      </dialog>
+    </section>
+
+    <footer>
+      <div class="footerContainer">
+        <div class="columnFooter">
+          <h1>LOGO</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <p class="alignEnd">@Logo</p>
+        </div>
+
+        <div class="columnFooter">
+          <h4>About us</h4>
+          <a href="error.html">Zeux</a>
+          <a href="error.html">Portfolio</a>
+          <a href="error.html">Careers</a>
+          <a href="contact.html">Contact us</a>
+        </div>
+
+        <div class="columnFooter">
+          <h4>Contact us</h4>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <p class="alignEnd">+908 89097 890</p>
+        </div>
+
+        <div class="columnFooter">
+          <div class="buttonsContainerFooter">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="circleFooter facebook"
+            >
+              <img src="images/facebook 1.svg" alt="facebook" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="circleFooter instagram"
+            >
+              <img src="images/instagram 1.svg" alt="instagram" />
+            </a>
+
+            <a
+              href="https://www.twitter.com/"
+              target="_blank"
+              class="circleFooter twitter"
+            >
+              <img src="images/twitter 1.svg" alt="twitter" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              class="circleFooter linkedin"
+            >
+              <img src="images/linkedin 1.svg" alt="linkedin" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyrightContainer">
+        <p>Copyright ® 2022 prodesigner All rights Rcerved</p>
+      </div>
+    </footer>
+
+    <script src="js/validarDadosContact.js"></script>
+    <script src="js/menuMobile.js"></script>
+  </body>
+</html>
