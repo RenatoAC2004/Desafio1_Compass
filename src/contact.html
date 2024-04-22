@@ -10,7 +10,11 @@
     <nav class="navbar">
       <span class="logo">LOGO</span>
 
-      <div class="lista">
+      <button class="menuMobile" id="menuMobile">
+        <img src="images/menu.svg" />
+      </button>
+      <div class="lista" id="itemsNav">
+        <span class="logoMobile">LOGO</span>
         <a href="home.html">Home</a>
         <a href="error.html">About us</a>
         <a href="error.html">Portfolio</a>
@@ -157,13 +161,15 @@
 
       <dialog id="modalValidacao" class="modalValidacao">
         <div class="modalContent">
-        <h1>Confirmado</h1>
-        <div class="imageTextModal">
-          <img src="images/confirm.svg" alt=""/>
-          <p>Seus dados foram enviados com sucesso!</p>
+          <h1>Confirmado</h1>
+          <div class="imageTextModal">
+            <img src="images/confirm.svg" alt="" />
+            <p>Seus dados foram enviados com sucesso!</p>
+          </div>
+          <button onclick="document.getElementById('modalValidacao').close()">
+            Fechar Modal
+          </button>
         </div>
-        <button onclick="document.getElementById('modalValidacao').close()">Fechar Modal</button>
-      </div>
       </dialog>
     </section>
 
@@ -238,5 +244,6 @@
     </footer>
 
     <script src="js/validarDadosContact.js"></script>
+    <script src="js/menuMobile.js"></script>
   </body>
 </html>

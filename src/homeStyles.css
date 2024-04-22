@@ -79,6 +79,23 @@ body {
   text-underline-offset: 7px;
 }
 
+/* MENU MOBILE */
+
+.menuMobile {
+  display: none;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.menuMobile img{
+  width: 30px;
+}
+
+.logoMobile{
+  display: none;
+}
+
 /* ---------------------------------------------------------- */
 
 /* SECTION HERO */
@@ -539,6 +556,10 @@ body {
   text-decoration: none;
 }
 
+.column a:hover{
+  text-decoration: underline;
+}
+
 .column .buttonsContainer a{
   padding-bottom: 0;
 }
@@ -811,4 +832,184 @@ body {
   padding: 80px 50px 50px 50px;
   column-gap: 50px;
 }
+}
+
+
+/* MEDIA QUERY: 768px */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR/SIDEBAR */
+
+  .menuMobile{
+    display: block;
+  }
+
+  .lista{
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #1C140F;
+  display: flex;
+  flex-direction: column;
+  transition: all 200ms ease-in-out;
+  z-index: 5;
+  row-gap: 10px;
+  padding: 0px 10px 0px 10px;
+  }
+
+  .lista a{
+    width: 240px;
+    padding: 16px;
+    background-color: rgb(255, 255, 255, 3%);
+    border-radius: 15px;
+    text-decoration: none;
+  }
+
+  .lista button{
+    width: 240px;
+    padding: 20px;
+  }
+
+  .menuMobile.ativo,
+  .lista.ativo{
+    left: 0;
+  }
+
+  .lista a:hover{
+    text-decoration: none;
+    background: #DC7000;
+  }
+
+  .logoMobile.ativo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    font-size: 29px;
+    font-weight: 800;
+    width: 100%;
+    border-bottom: 1px white solid;
+  }
+
+  .lista .active {
+    text-decoration-line: none;
+    background-color:  #dc7000;
+    font-weight: bold;
+  }
+
+  /* ---------------------------------------------------------- */
+
+  /* HERO SECTION */
+
+  .sectionHero{
+    height: 100%;
+  }
+
+  .heroContainer{
+    flex-direction: column;
+  }
+
+  .heroTextContainer{
+    width: 100%;
+    max-width: none;
+    padding: 80px 50px 0px 50px;
+  }
+
+  .heroImageContainer{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  /* ---------------------------------------------------------- */
+
+    /* GAMES SECTION */
+
+    .sectionGames{
+      margin-top: 80px;
+    }
+
+    .gameImagesContainer{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      column-gap: 10px;
+      row-gap: 40px;
+    }
+
+  /* ---------------------------------------------------------- */
+
+    /* SERVICES SECTION */
+
+  .mainContentContainer {
+      padding: 0px 50px;
+  }
+
+  .servicesText{
+    padding: 0px 0px 100px 0px;
+  }
+
+  .servicesItems{
+    column-gap: 25px;
+  }
+
+  .servicesItems .item{
+    max-width: 100%;
+  }
+
+  .linha2{
+    column-gap: 25px;
+  }
+
+  /* ---------------------------------------------------------- */
+
+  /* NEWSLETTER SECTION */
+
+  .newsletterContainer{
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .newsletterContainer{
+    height: fit-content;
+    row-gap: 30px;
+  }
+
+  .newsletterFormText{
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ---------------------------------------------------------- */
+
+  /* FOOTER */
+
+  .footerContainer{
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 50px;
+  }
+
+  .column{
+    text-align: center;
+    align-items: center;
+  }
+
+  .column h4{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .column p{
+    justify-content: center;
+  }
+
+  .column .alignEnd{
+    border-bottom: 1px white solid;
+    width: 100%;
+  }
+  
 }
