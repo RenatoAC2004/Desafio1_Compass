@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('.newsletterForm').addEventListener('submit', validarDadosNewsletter);
 
-    const emailNewsletterHomeSalvo = localStorage.getItem("emailNewsletterHome")
+//     const emailNewsletterHomeSalvo = localStorage.getItem("emailNewsletterHome")
 
 
-if(emailNewsletterHomeSalvo){
-    document.getElementById("inputEmail").value = emailNewsletterHomeSalvo
-}
+// if(emailNewsletterHomeSalvo){
+//     document.getElementById("inputEmail").value = emailNewsletterHomeSalvo
+// }
     });

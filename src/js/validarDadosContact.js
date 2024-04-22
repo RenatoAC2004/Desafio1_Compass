@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 const regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+const regexNome = /^[a-zA-Z]+$/
 
 let estaValido;
 
@@ -21,8 +22,8 @@ function validarDados(evento) {
 
     estaValido = true;
 
-    if (firstName.value.length <= 1) {
-        erroFirstName.textContent = "O primeiro nome precisa ter mais de um caractere."
+    if (firstName.value.length < 3 || !regexNome.test(firstName.value)) {
+        erroFirstName.textContent = "O primeiro nome precisa ter mais de três caracteres, sem caracteres especiais."
         firstName.style.borderColor = "#DC7000"
         estaValido = false
     } else {
@@ -30,8 +31,8 @@ function validarDados(evento) {
         firstName.style.borderColor = ""
     }
 
-    if (lastName.value.length <= 1) {
-        erroLastName.textContent = "O último nome precisa ter mais de um caractere."
+    if (lastName.value.length < 3 || !regexNome.test(lastName.value)) {
+        erroLastName.textContent = "O último nome precisa ter mais de três caracteres, sem caracteres especiais."
         lastName.style.borderColor = "#DC7000"
         estaValido = false
     } else {
@@ -108,18 +109,18 @@ function validarDadosNewsletter(evento){
 document.querySelector('.form').addEventListener('submit', validarDados);
 document.querySelector('.newsletterForm').addEventListener('submit', validarDadosNewsletter);
 
-const dadosSalvos = localStorage.getItem("dadosFormulario");
-const emailNewsletterSalvo = localStorage.getItem("emailNewsletter")
+// const dadosSalvos = localStorage.getItem("dadosFormulario");
+// const emailNewsletterSalvo = localStorage.getItem("emailNewsletter")
 
-if(dadosSalvos) {
-    const dados = JSON.parse(dadosSalvos);
-    document.getElementById('firstName').value = dados.firstName
-    document.getElementById('lastName').value = dados.lastName
-    document.getElementById('email').value = dados.email
-    document.getElementById('message').value = dados.message
-}
+// if(dadosSalvos) {
+//     const dados = JSON.parse(dadosSalvos);
+//     document.getElementById('firstName').value = dados.firstName
+//     document.getElementById('lastName').value = dados.lastName
+//     document.getElementById('email').value = dados.email
+//     document.getElementById('message').value = dados.message
+// }
 
-if(emailNewsletterSalvo){
-    document.getElementById("inputEmail2").value = emailNewsletterSalvo
-}
+// if(emailNewsletterSalvo){
+//     document.getElementById("inputEmail2").value = emailNewsletterSalvo
+// }
 });

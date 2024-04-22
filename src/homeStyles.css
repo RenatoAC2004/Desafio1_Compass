@@ -20,7 +20,7 @@ body {
 /* NAVBAR */
 
 .navbar {
-  z-index: 2;
+  z-index: 5;
   position: fixed;
   width: 100%;
   height: 80px;
@@ -97,10 +97,10 @@ body {
 .heroTextContainer {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  max-width: 43%;
   align-items: center;
   justify-content: center;
-  padding: 0px 150px;
+  padding: 0px 10px 0px 150px;
 }
 
 .coloredText {
@@ -138,11 +138,8 @@ body {
 }
 
 .heroImageContainer {
-  width: 50%;
-}
-
-.imageController {
-  width: 90%;
+  max-width: 57%;
+  overflow: hidden;
 }
 
 /* ---------------------------------------------------------- */
@@ -150,7 +147,7 @@ body {
 /* GAMES SECTION */
 
 .sectionGames {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -159,7 +156,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 150px 0px 150px;
+  padding: 0px 150px 0px 150px;
 }
 .titleContainer {
   width: 100%;
@@ -188,6 +185,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  column-gap: 50px;
 }
 
 .imageAndText {
@@ -210,7 +208,7 @@ body {
 }
 
 .gamesMainText {
-  padding-top: 130px;
+  padding: 130px 0px;
   font-weight: 600;
   font-size: 35px;
   text-align: center;
@@ -219,6 +217,10 @@ body {
 .gameImage {
   display: flex;
   border-radius: 20px;
+}
+
+.gameImage img{
+  max-width: 100%;
 }
 
 .titleContainer button:hover {
@@ -238,16 +240,33 @@ body {
 }
 
 .titleBigImage h1 {
-  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .bigImage {
+  position: relative;
   width: 100%;
   height: 460px;
-  background-image: url("images/spiderman.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.spidermanImage{
+  position: relative;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.orangeCircles{
+  position: absolute;
+  right: 125px;
+  top: -70px;
+  
 }
 
 /* ---------------------------------------------------------- */
@@ -282,7 +301,7 @@ body {
   display: flex;
   text-align: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 100px 200px;
 }
@@ -291,7 +310,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
-  padding: 0px 110px;
+  padding: 0px 110px 100px 110px;
 }
 
 .servicesText h1 {
@@ -307,6 +326,7 @@ body {
 .servicesItems {
   display: flex;
   column-gap: 100px;
+  padding-bottom: 60px;
 }
 
 .linha2 {
@@ -318,6 +338,26 @@ body {
   padding: 30px 0px;
 }
 
+.item span{
+  display: flex;
+  justify-content: center;
+}
+
+.item a{
+  width: fit-content;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  justify-self: center;
+  transition: all 200ms ease-in-out;
+}
+
+.item a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* ---------------------------------------------------------- */
 
 /* PROJECTS SECTION */
@@ -326,9 +366,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding: 80px 135px 0px 135px;
+  padding: 100px 135px 100px 135px;
   text-align: center;
-  row-gap: 80px;
+  row-gap: 70px;
   align-items: center;
   justify-content: center;
 }
@@ -339,8 +379,18 @@ body {
   row-gap: 15px;
 }
 
+.projectsText h1{
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.projectsText p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
 .projectsImagesContainer {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -351,6 +401,11 @@ body {
 .projectsLine {
   display: flex;
   column-gap: 30px;
+  max-width: 100%;
+}
+
+.projectsLine img {
+  min-width: 0px;
 }
 
 .projectsButton button {
@@ -382,7 +437,7 @@ body {
 
 .sectionNewsletter {
   height: 100%;
-  padding: 150px 135px;
+  padding: 0px 135px 150px 135px;
 }
 
 .newsletterText {
@@ -484,6 +539,10 @@ body {
   text-decoration: none;
 }
 
+.column .buttonsContainer a{
+  padding-bottom: 0;
+}
+
 .column p {
   height: 100%;
   display: flex;
@@ -509,9 +568,7 @@ body {
   background-color: white;
   border-radius: 9999px;
   cursor: pointer;
-}
-
-.circle a {
+  transition: all 200ms ease-in-out;
   padding-bottom: 0;
 }
 
@@ -522,6 +579,22 @@ body {
   width: 100%;
   padding: 30px;
   background-color: #070707;
+}
+
+.facebook:hover{
+  background-color: #1877F2;
+}
+
+.instagram:hover{
+  background-color: #E4405F;
+}
+
+.twitter:hover{
+  background-color: #1DA1F2;
+}
+
+.linkedin:hover{
+  background-color: #0077B5;
 }
 
 /* ESTILO SPAN VALIDAÇÃO DOS DADOS */
@@ -591,4 +664,151 @@ body {
   background-color: #eb6f0b;
   font-weight: bold;
   transition: all 200ms ease-in-out;
+}
+
+/* MEDIA QUERY: MAIOR QUE 1440px */
+
+@media (min-width: 1441px) {
+  .heroContainer{
+    justify-content: space-between;
+  }
+}
+
+/* MEDIA QUERY: 1280px */
+
+@media (max-width: 1280px) {
+/* ---------------------------------------------------------- */
+
+/* SECTION HERO */
+
+  .heroTextContainer {
+    padding: 0px 10px 0px 75px;
+  }
+  
+/* ---------------------------------------------------------- */
+
+/* GAMES SECTION */
+
+.gamesContainer{
+  padding: 80px 75px 0px 75px;
+
+}
+
+/* ---------------------------------------------------------- */
+
+/* BIG IMAGE SECTION */
+
+.sectionBigImage{
+  padding: 0px 75px 150px 75px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* SERVICES SECTION */
+
+.mainContentContainer{
+  padding: 100px 100px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* PROJECTS SECTION */
+
+.sectionProjects{
+  padding: 100px 90px 100px 90px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* NEWSLETTER SECTION */
+
+.sectionNewsletter {
+  height: 100%;
+  padding: 0px 90px 150px 90px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* FOOTER */
+
+.footerContainer {
+  padding: 80px 75px 50px 75px;
+  column-gap: 75px;
+}
+}
+
+/* MEDIA QUERY: 1024px */
+
+@media (max-width: 1024px) {
+
+  /* NAVBAR */
+
+  .lista {
+    column-gap: 44px;
+  }
+
+/* ---------------------------------------------------------- */
+
+/* SECTION HERO */
+
+.heroTextContainer {
+  padding: 0px 10px 0px 50px;
+  width: 40%;
+}
+
+.heroImageContainer{
+  max-width: 60%;
+}
+
+.titleText {
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 17px;
+  padding-bottom: 26px;
+}
+
+.heroImageContainer img{
+  max-width: 700px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* GAMES SECTION */
+.gamesContainer{
+  padding: 0px 50px 0px 50px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* BIG IMAGE SECTION */
+
+.sectionBigImage{
+  padding: 0px 50px 150px 50px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* PROJECTS SECTION */
+
+.sectionProjects{
+  padding: 100px 50px 100px 50px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* NEWSLETTER SECTION */
+
+.sectionNewsletter {
+  height: 100%;
+  padding: 0px 50px 150px 50px;
+}
+
+/* ---------------------------------------------------------- */
+
+/* FOOTER */
+
+.footerContainer {
+  padding: 80px 50px 50px 50px;
+  column-gap: 50px;
+}
 }

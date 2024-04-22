@@ -110,6 +110,7 @@ body {
 }
 
 .mapaImagem {
+  max-width: 100%;
   padding: 100px 0px 70px 0px;
 }
 
@@ -147,6 +148,7 @@ body {
   background-color: #1c140f;
   border-radius: 9999px;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
 }
 
 .column2 {
@@ -421,12 +423,14 @@ textarea{
     width: 34px;
     background-color: white;
     border-radius: 9999px;
+    transition: all 200ms ease-in-out;
     cursor: pointer;
   }
   
-  .circleFooter a {
+  .columnFooter .buttonsContainerFooter a{
     padding-bottom: 0;
   }
+  
   
   .copyrightContainer {
     display: flex;
@@ -436,6 +440,23 @@ textarea{
     padding: 30px;
     background-color: #070707;
   }
+
+  .facebook:hover{
+    background-color: #1877F2;
+  }
+  
+  .instagram:hover{
+    background-color: #E4405F;
+  }
+  
+  .twitter:hover{
+    background-color: #1DA1F2;
+  }
+  
+  .linkedin:hover{
+    background-color: #0077B5;
+  }
+  
   
   /* ESTILO SPAN VALIDAÇÃO DOS DADOS */
 
@@ -504,4 +525,31 @@ textarea{
   background-color: #eb6f0b;
   font-weight: bold;
   transition: all 200ms ease-in-out;
+}
+
+/* MEDIA QUERY: 1024px */
+
+@media (max-width: 1024px) {
+
+/* CONTACT SECTION */
+
+.contactBar{
+  column-gap: 50px;
+}
+
+.column2{
+  padding: 0px 50px;
+}
+
+/* FOOTER */
+.footerContainer{
+  column-gap: 50px;
+}
+
+/* NEWSLETTER SECTION */
+
+.sectionNewsletter{
+  padding: 150px 68px;
+}
+
 }

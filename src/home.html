@@ -37,7 +37,7 @@
         </div>
 
         <div class="heroImageContainer">
-          <img src="images/controle2.png" alt="" class="imageController" />
+          <img src="images/controle3.png" alt="" class="imageController" />
         </div>
       </div>
     </section>
@@ -106,7 +106,10 @@
           </p>
         </div>
 
-        <div class="bigImage"></div>
+        <div class="bigImage">
+          <img src="images/spiderman.jpg" alt="" class="spidermanImage" />
+          <img src="images/orange_circles.svg" alt="" class="orangeCircles" />
+        </div>
       </div>
     </section>
 
@@ -129,35 +132,47 @@
               <div class="item">
                 <img src="images/phone.svg" alt="" />
                 <p>Mobile Game Development</p>
-                <img src="images/arrow.svg" alt="" />
+                <span
+                  ><a href="error.html"><img src="images/arrow.svg" alt="" /></a
+                ></span>
               </div>
 
               <div class="item">
                 <img src="images/pc.svg" alt="" />
                 <p>PC Game Development</p>
-                <img src="images/arrow.svg" alt="" />
+                <span
+                  ><a href="error.html"><img src="images/arrow.svg" alt="" /></a
+                ></span>
               </div>
               <div class="item">
                 <img src="images/ps4.svg" alt="" />
                 <p>PS4 Game Development</p>
-                <img src="images/arrow.svg" alt="" />
+                <span
+                  ><a href="error.html"><img src="images/arrow.svg" alt="" /></a
+                ></span>
               </div>
               <div class="item">
                 <img src="images/VR.svg" alt="" />
                 <p>AR/VR Solutions</p>
-                <img src="images/arrow.svg" alt="" />
+                <span
+                  ><a href="error.html"><img src="images/arrow.svg" alt="" /></a
+                ></span>
               </div>
             </div>
             <div class="linha2">
               <div class="item">
                 <img src="images/VRDesign.svg" alt="" />
                 <p>AR/ VR design</p>
-                <img src="images/arrow.svg" alt="" />
+                <span
+                  ><a href="error.html"><img src="images/arrow.svg" alt="" /></a
+                ></span>
               </div>
               <div class="item">
                 <img src="images/3D.svg" alt="" />
                 <p>3D Modelings</p>
-                <img src="images/arrow.svg" alt="" />
+                <span
+                  ><a href="error.html"><img src="images/arrow.svg" alt="" /></a
+                ></span>
               </div>
             </div>
           </div>
@@ -188,7 +203,7 @@
       </div>
 
       <div class="projectsButton">
-        <button onclick="window.location.href='contact.html'">SEE ALL</button>
+        <button onclick="window.location.href='error.html'">SEE ALL</button>
       </div>
     </section>
 
@@ -225,13 +240,15 @@
       </div>
       <dialog id="modalValidacao" class="modalValidacao">
         <div class="modalContent">
-        <h1>Confirmado</h1>
-        <div class="imageTextModal">
-          <img src="images/confirm.svg" alt=""/>
-          <p>Seus dados foram enviados com sucesso!</p>
+          <h1>Confirmado</h1>
+          <div class="imageTextModal">
+            <img src="images/confirm.svg" alt="" />
+            <p>Seus dados foram enviados com sucesso!</p>
+          </div>
+          <button onclick="document.getElementById('modalValidacao').close()">
+            Fechar Modal
+          </button>
         </div>
-        <button onclick="document.getElementById('modalValidacao').close()">Fechar Modal</button>
-      </div>
       </dialog>
     </section>
 
@@ -265,26 +282,37 @@
 
         <div class="column">
           <div class="buttonsContainer">
-            <div class="circle">
-              <a href="https://www.facebook.com" target="_blank">
-                <img src="images/facebook 1.svg" alt="facebook" />
-              </a>
-            </div>
-            <div class="circle">
-              <a href="https://www.instagram.com/" target="_blank">
-                <img src="images/instagram 1.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="circle">
-              <a href="https://www.twitter.com/" target="_blank">
-                <img src="images/twitter 1.svg" alt="twitter" />
-              </a>
-            </div>
-            <div class="circle">
-              <a href="https://www.linkedin.com/" target="_blank">
-                <img src="images/linkedin 1.svg" alt="linkedin" />
-              </a>
-            </div>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="circle facebook"
+            >
+              <img src="images/facebook 1.svg" alt="facebook" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="circle instagram"
+            >
+              <img src="images/instagram 1.svg" alt="instagram" />
+            </a>
+
+            <a
+              href="https://www.twitter.com/"
+              target="_blank"
+              class="circle twitter"
+            >
+              <img src="images/twitter 1.svg" alt="twitter" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              class="circle linkedin"
+            >
+              <img src="images/linkedin 1.svg" alt="linkedin" />
+            </a>
           </div>
         </div>
       </div>
